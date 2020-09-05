@@ -1,25 +1,177 @@
 /*---------------------- Settings ----------------------*/
-
-/* font-family: 'Cardo', serif; */
-/* font-family: 'Bungee Shade', cursive; */
-
-/* LES VARIABLES CSS ICI */
+:root {
+    --title-font: 'Bungee Shade', cursive;
+    --text-font: 'Cardo', serif;
+    --black-color: #000;
+    --white-color: #fff;
+}
 
 /*---------------------- Generic ----------------------*/
-
-/* Mettre la ligne universelle pour le box-sizing */
-
-
+html{box-sizing: border-box;}
+*, *:before, *:after{box-sizing: inherit;}
 
 /*---------------------- Elements ----------------------*/
+body{
+    min-width: 1440px;
+    margin: 0;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.conteneur{
+    width: 1140px;
+    margin: auto;
+}
 
-
-
-
+h1, h2{
+    color: var(--white-color);
+    font-family: var(--title-font);
+    line-height: 96px;
+}
+h3, h4{
+    color: var(--black-color);
+    font-family: var(--text-font);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h1{
+    font-size: 36px;
+    line-height: 43px;
+}
+h2{font-size: 80px;}
+h3{font-size: 40px;}
+h4{font-size: 18px;}
+a{
+    text-decoration: none;
+    font-family: var(--text-font)f;
+    color: var(--white-color);
+}
+p{
+    color: var(--black-color);
+    font-family: var(--text-font);
+    font-size: 18px;
+}
 
 /*---------------------- Components ----------------------*/
+.header-principal{
+    background-color: var(--black-color);
+    height: 73px;
+}
+.header-principal{
+    display: flex;
+    align-items: center;
+}
 
+.hero{
+    background-color: var(--black-color);
+    height: 500px;
+    position: relative;
+}
+.hero p, .hero a{
+    color: var(--white-color);
+    font-size: 24px;
+}
+.hero video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+.hero .content{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero h2, .hero p, .hero a{margin: 12px 0;}
+.hero::after{
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(35.74deg, rgba(167, 2, 154, 0.7) -2.92%, rgba(167, 2, 154, 0) 106.13%);
+}
 
+.interet{
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: url(../images/bg-interet.jpg);
+    background-size: cover;
+}
+.interet .conteneur{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.cartes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.carte{
+    width: 352px;
+    height: 367px;
+    margin: 40px auto 0;
+    background-color: var(--white-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.carte h4, .carte p{
+    margin: auto;
+    text-align: center;
+}
+.carte img{
+    min-height: 151px;
+    min-width: 151px;
+}
+
+.citation{
+    background-image: url(../images/bg-citation.jpg);
+    background-size: 100%;
+    background-position: bottom;
+    background-attachment: fixed;
+    height: 404px;
+}
+.citation .conteneur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+}
+.citation h3, .citation p{color: var(--white-color);}
+.citation h3{margin: 0 0 18px 0;}
+.citation p{margin: 0;}
+
+.footer-principal{
+    background-color: var(--black-color);
+    height: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-principal p{
+    color: var(--white-color);
+}
 
 
 
